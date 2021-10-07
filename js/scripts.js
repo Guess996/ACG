@@ -20,7 +20,6 @@
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-
     };
 
     // Shrink the navbar 
@@ -50,7 +49,6 @@
             }
         });
     });
-
 });
     const textSearch=document.querySelector('#textSearch')
     const SearchButton=document.querySelector('#Button')

@@ -11643,7 +11643,6 @@ body {
   border: 1px #fff solid;
   border-radius: 5px;
   transition: all .2s;
-
 }
 .content-section_div>ul>li>p>a:hover{
   color: #000;
@@ -11654,7 +11653,6 @@ body {
     flex-wrap: wrap;
   }
 }
-
 .search-section {
   padding: 10rem 0;
   backdrop-filter:blur(20px);
