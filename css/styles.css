@@ -11547,7 +11547,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/wallhaven-83k8wy.png");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11658,7 +11658,7 @@ body {
   backdrop-filter:blur(20px);
   /* background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%),url("../assets/img/bg-search.jpg"); */
   background-color: #fff;
-  background-image: url("../assets/img/wallhaven-83k8wy.png");
+  background-image: url("../assets/img/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
