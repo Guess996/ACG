@@ -11610,7 +11610,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-bottom: 1px solid #fff; */
 }
 .content-section_div>h4{
   width: 280px;
