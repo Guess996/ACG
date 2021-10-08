@@ -60,4 +60,13 @@
         }
 
     }
-    (function() {var a = new Date(); debugger; return new Date() - a > 100;}())
+    const social=document.querySelectorAll('#social>a')
+    for(let i=0;i<3;i++ ){
+        social[i].onclick=()=>{
+            switch(i){
+                case 2:location.replace('https://%72%65%73%2e%61%62%65%69%6d%2e%63%6e/%61%70%69/%71%71/?%71%71=10001')
+                break;
+                default:alert('没有')
+            }
+        }
+    }

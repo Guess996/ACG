@@ -78,7 +78,9 @@
     scroll-behavior: smooth;
   }
 }
-
+*{
+  transition: all .3s;
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -90,6 +92,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
 }
 
 hr {
@@ -4623,6 +4626,11 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+}
+.card1{background: url('https://www.yingciyuan.cn/pc.php');background-size: cover;}
+.card2{background: url('https://www.xinua.cn/api/dmapi/acgurl.php');background-size: cover;}
+.card3{
+  background: url('http://api.hippoliu.site/api/ag/pc.php');background-size: cover;
 }
 .card > hr {
   margin-right: 0;
@@ -11602,15 +11610,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* border-bottom: 1px solid #fff; */
 }
-.content-section_div>button{
+.content-section_div>h4{
   width: 280px;
   height: 40px;
   background: none;
   color: #fff; 
-  outline: none;
   border: none;
   border-bottom:#fff solid 1px;
+  font-size: 25px;
+  margin: 0;
+  position: relative;
+  letter-spacing: 10px;
+  background:linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: aaa 3s infinite;
+}
+@keyframes aaa{
+  to{filter: hue-rotate(360deg);}
 }
 .content-section_div>ul{
   width: 100%;
@@ -11629,13 +11648,12 @@ body {
   margin-top: 10px;
   
 }
-.content-section_div>ul>li>p{
+.content-section_div>ul>li>a{
   margin: 0;
-}
-.content-section_div>ul>li>p>a{
   width: 150px;
   height: 50px;
   display: block;
+  overflow: hidden;
   text-overflow: ellipsis;
   line-height: 50px;
   text-decoration: none;
@@ -11644,7 +11662,7 @@ body {
   border-radius: 5px;
   transition: all .2s;
 }
-.content-section_div>ul>li>p>a:hover{
+.content-section_div>ul>li>a:hover{
   color: #000;
   background: #fff;
 }
