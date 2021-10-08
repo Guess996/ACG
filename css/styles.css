@@ -11626,9 +11626,11 @@ body {
   -webkit-background-clip: text;
   animation: aaa 3s infinite;
 }
+
 @keyframes aaa{
   to{filter: hue-rotate(360deg);}
 }
+
 .content-section_div>ul{
   width: 100%;
   list-style: none;
