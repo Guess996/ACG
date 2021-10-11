@@ -11621,7 +11621,7 @@ body {
   margin: 0;
   position: relative;
   letter-spacing: 10px;
-  background:linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+  background:linear-gradient(135deg,#ff14ff,#ffee03,#ff000d);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: aaa 3s infinite;
