@@ -11567,7 +11567,7 @@ body {
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   -webkit-background-clip: text;
           background-clip: text;
 }
@@ -11742,4 +11742,30 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+
+.at-item {
+  color: #fff;
+  animation-name: text-shadow-multicolor2;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes text-shadow-multicolor2 {
+  0%{
+    filter: blur(0);
+    opacity: 1;
+  }
+  50%{
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100%{
+    filter: blur(0);
+    opacity: 1;
+  }
 }
