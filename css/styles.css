@@ -4630,7 +4630,7 @@ textarea.form-control-lg {
 .card1{background: url('https://www.yingciyuan.cn/pc.php');background-size: cover;}
 .card2{background: url('https://www.xinua.cn/api/dmapi/acgurl.php');background-size: cover;}
 .card3{
-  background: url('http://api.hippoliu.site/api/ag/pc.php');background-size: cover;
+  background: url('https://api.ixiaowai.cn/api/api.php');background-size: cover;
 }
 .card > hr {
   margin-right: 0;
@@ -11555,7 +11555,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/background.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("https://api.mtyqx.cn/tapi/random.php");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
