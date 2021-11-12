@@ -11463,8 +11463,29 @@ html {
 
 body {
   letter-spacing: 0.0625em;
+  /* overflow: hidden; */
 }
 
+body::-webkit-scrollbar{
+
+  width: 0px;    
+   /* 高宽分别对应横竖滚动条的尺寸 */
+
+  height: 0px;
+
+}
+/* body::-webkit-scrollbar-thumb,.website::-webkit-scrollbar-thumb { */
+  /* 滚动条里面小方块 */
+  /* border-radius: 10px; */
+   /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
+  /* background: #00cce7; */
+/* } */
+/* body::-webkit-scrollbar-track{ */
+  /* 滚动条里面轨道 */
+  /* background-color: rgba(255, 255, 255,0); */
+  /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
+  /* border-radius: 10px; */
+/* } */
 #mainNav {
   min-height: 3.5rem;
   background-color: #fff;
