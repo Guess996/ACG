@@ -4628,7 +4628,7 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
 }
 .card1{background: url('https://www.yingciyuan.cn/pc.php');background-size: cover;}
-.card2{background: url('https://www.xinua.cn/api/dmapi/acgurl.php');background-size: cover;}
+.card2{background: url('https://api.ghser.com/random/pc.php');background-size: cover;}
 .card3{
   background: url('https://api.ixiaowai.cn/api/api.php');background-size: cover;
 }
