@@ -11501,7 +11501,7 @@ body::-webkit-scrollbar{
   outline: none;
 }
 #mainNav .navbar-brand {
-  color: #000;
+  color: #64a19d;
   font-weight: 700;
   padding: 0.9rem 0;
 }
@@ -11632,8 +11632,9 @@ body::-webkit-scrollbar{
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 5px;
-
+  padding: 10px 5px 10px 5px;
+  background-color: #64a19d;
+  box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.1);
 
 }
 .ullabel>ul>li{
@@ -11641,7 +11642,9 @@ body::-webkit-scrollbar{
   display:inline-block;
   margin-top: 10px;
   padding: 10px;
-  border: 1px #64a19d solid;
+  /* border: 1px #64a19d solid; */
+  color: #fff;
+  border-radius: 5px;
   box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.1);
 }
 .ullabel>ul>li:hover{
@@ -11696,7 +11699,7 @@ body::-webkit-scrollbar{
   padding: 0 20px;
 }
 .content-section_div>ul>li{
-  width: 80px;
+  width: 140px;
   justify-content: space-around;
   margin-top: 10px;
   margin: 10px;
@@ -11711,19 +11714,19 @@ body::-webkit-scrollbar{
   line-height: 50px;
   text-decoration: none;
   color: #000;
-  border-bottom: 2px #000 solid;
+  border-bottom: 2px #64a19d solid;
+  border-radius: 5px;
   transition: all .2s;
   
 
 }
 .content-section_div>ul>li:hover{
-  
-
   transform: scale(1.1);
 }
 .content-section_div>ul>li>a:hover{
-  color: #64a19d;
-  border-color: #64a19d;
+  color: #fff;
+  background-color:#64a19d ;
+
 }
 @media (max-width: 975px) {
   .content-section_div>ul,.urllabel>li{

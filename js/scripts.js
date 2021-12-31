@@ -83,16 +83,16 @@
     var ullabel= document.querySelectorAll('.ullabel>ul>li');
     // labelbar[0].style.display='none';
     labelcont[0].style.display='block';
-    ullabel[0].style.background='#64a19d';
-    ullabel[0].style.color='#fff';
+    ullabel[0].style.background='#fff';
+    ullabel[0].style.color='#64a19d';
     for(let i=0;i<ullabel.length;i++){
         ullabel[i].onclick=()=>{
 
             labelcont.forEach((i)=>{i.style.display='none'});
-            ullabel.forEach((i)=>{i.style.background='',i.style.color='#000'});
+            ullabel.forEach((i)=>{i.style.background='',i.style.color='#fff'});
             labelcont[i].style.display='block';
-            ullabel[i].style.background='#64a19d';
-            ullabel[i].style.color='#fff';
+            ullabel[i].style.background='#fff';
+            ullabel[i].style.color='#64a19d';
         }
     }
     
