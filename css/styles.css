@@ -11817,6 +11817,8 @@ body::-webkit-scrollbar{
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: forwards;
+  cursor: pointer;
+  user-select: none;
 }
 @keyframes text-shadow-multicolor2 {
   0%{
