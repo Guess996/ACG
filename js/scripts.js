@@ -6,7 +6,7 @@
 //
 // Scripts
 // 
- window.addEventListener('DOMContentLoaded', event => {
+    window.addEventListener('DOMContentLoaded', () => {
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -48,7 +48,6 @@
         });
     });
 });
-window.onload=()=>{
      const textSearch=document.querySelector('#textSearch');
     const SearchButton=document.querySelector('#Button');
     SearchButton.onclick=()=>{
@@ -84,19 +83,20 @@ window.onload=()=>{
     labelcont[0].style.display='block';
     ullabel[0].style.background='#fff';
     ullabel[0].style.color='#64a19d';
-    for(let i=0;i<ullabel.length;i++){
-        ullabel[i].onclick=()=>{
+        for(let i=0;i<ullabel.length;i++){
+            ullabel[i].onclick=()=>{
 
-            labelcont.forEach((i)=>{i.style.display='none'});
-            ullabel.forEach((i)=>{i.style.background='',i.style.color='#fff'});
-            labelcont[i].style.display='block';
-            ullabel[i].style.background='#fff';
-            ullabel[i].style.color='#64a19d';
+                labelcont.forEach((i)=>{i.style.display='none'});
+                ullabel.forEach((i)=>{i.style.background='',i.style.color='#fff'});
+                labelcont[i].style.display='block';
+                ullabel[i].style.background='#fff';
+                ullabel[i].style.color='#64a19d';
+            }
         }
-
-}
     console.log("\n %c WebSite 动漫导航 %c https://guess996.github.io/ACG/ \n", "color: #ffffff; background: #64a19d; padding:5px 0;", "background: #030307; padding:5px 0;");
-   axios.get('https://data.zhai78.com/openOneGood.php')
+
+
+    axios.get('https://data.zhai78.com/openOneGood.php')
     .then(function (response) {
       console.log(response.data.txt);
       document.querySelector('h2.at-item').innerHTML=response.data.txt;
@@ -104,8 +104,9 @@ window.onload=()=>{
     .catch(function (error) {
       console.log(error);
     }); 
+   
        
-}//DOMContentLoaded
+//DOMContentLoaded
 
 // window.onload=()=>{
 //     console.log(sss);
