@@ -4166,6 +4166,9 @@ textarea.form-control-lg {
   text-decoration: none;
   white-space: nowrap;
 }
+a.navbar-brand:hover{
+  color: #000 !important;
+}
 .navbar-nav {
   display: flex;
   flex-direction: column;
@@ -11577,6 +11580,7 @@ body::-webkit-scrollbar{
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
+  /*https://api.mtyqx.cn/tapi/random.php*/
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 75%, #fff 100%), url("https://api.mtyqx.cn/tapi/random.php");
   background-position: center;
   background-repeat: no-repeat;
@@ -11735,14 +11739,27 @@ body::-webkit-scrollbar{
 }
 .search-section {
   padding: 10rem 0;
-  backdrop-filter:blur(20px);
+  /* backdrop-filter:blur(100px); */
   /* background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%),url("../assets/img/bg-search.jpg"); */
-  background-color: #fff;
-  background-image: url("../assets/img/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+  /* background-color: #fff; */
+  /* background-image: url("../assets/img/background.jpg"); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: scroll; */
+  /* background-size: cover; */
+  position: relative;
+}
+.search-section::before{    
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#fff url('../assets/img/background.jpg') center center no-repeat;
+  filter:blur(10px);
+  z-index:-1;
+  background-size:cover;
 }
 .search-section .form-search input,.search-button {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
@@ -11843,4 +11860,7 @@ body::-webkit-scrollbar{
 }
 .row >.col-md-4>.card:hover{
   transform: scale(1.1);
+}
+h1 span.at-item:hover,h2.at-item:hover{
+  color: #000 !important;
 }

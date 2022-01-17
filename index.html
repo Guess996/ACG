@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="AGE专注于资源收集整理" />
+        <meta name="description" content="专注于资源收集整理" />
         <meta name="author" content="" />
-        <title>Animation-Comics-Gamegs</title>
+        <title>动漫导航</title>
         <link rel="icon" type="image/png" href="assets/favicon.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -14,12 +14,14 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="js/scripts.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" title="ACG介绍" href="https://zh.moegirl.org.cn/ACG" target="_blank">ACG</a>
+                <a class="navbar-brand" title="ACG" href="javascript:;">ACG</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -27,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#page-top">开始</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#content">内容</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dhl">内容</a></li>
                         <li class="nav-item"><a class="nav-link" href="#search">搜索</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="https://jubt.live/cn/index.html">聚BT</a></li> -->
                     </ul>
@@ -40,7 +42,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase "><span class="at-item">ACG</span> </h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5 at-item">关于这个网址搜索-收藏动漫网址和分享其他内容</h2>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5 at-item"></h2>
                         <!-- <h1 class="mx-auto my-0 text-uppercase "><span class="at-item">2022</span> </h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5 at-item">祝大家新年快乐</h2> -->
                         <!-- <a class="btn btn-primary" href="#content">Go</a> -->
@@ -60,8 +62,7 @@
                 </ul>
             </div> -->
 
-            <div class="ullabel">
-                
+            <div class="ullabel" id="dhl">
                 <ul>
                     <li>动漫收藏</li>
                     <li>图片小工具</li>
@@ -287,6 +288,8 @@
 
             <div class="content-section_div">
                 <ul>
+                    <li><a title="" href="https://yandex.com/" target="_blank" title="俄罗斯搜索引擎">俄罗斯搜索引擎</a></li>
+
                     <li><a title="" href="http://www.chongbuluo.cn/" target="_blank">虫部落</a></li>
                     <li><a title="" href="https://magi.com/" target="_blank">Magi</a></li>
                     <li><a title="" href="https://www.addog.vip/" target="_blank">网址导航</a></li>
@@ -306,7 +309,7 @@
                     <li><a title="" href="https://www.aconvert.com/cn/" target="_blank">格式转换Aconvert</a></li>
                     <li><a title="" href="https://www.yikm.net/" target="_blank">小霸王游戏机</a></li>
                     <li><a title="" href="https://www.doutula.com/ " target="_blank">斗图啦</a></li>
-                    <li><a title="" href="http://mtool.chinaz.com/" target="_blank">站长工具</a></li>
+                    <li><a title="" href="https://www.diydoutu.com/" title="DIY斗图">DIY斗图</a></li>
                     <li><a title="" href="https://htmlcolorcodes.com/">颜色代码</a></li>
                     <li><a title="" href="http://zhongguose.com/">中国传统色</a></li>
                     <li><a title="" href="https://www.mydrivers.com/zhuanti/tianti/gpu/">桌面显卡性能排行榜</a></li>
@@ -314,6 +317,8 @@
                     <li><a title="" href="https://www.mydrivers.com/zhuanti/tianti/01/" title="手机CPU性能排行榜">手机CPU性能排行榜</a></li>
                     <li><a title="" href="https://tool.chinaz.com/" title="站长工具">站长工具</a></li>
                     <li><a title="" href="http://mtool.chinaz.com/" title="站长工具">站长工具移动版</a></li>
+                    <li><a title="" href="https://msdn.itellyou.cn/" title="MSDN，我告诉你">MSDN，我告诉你</a></li>
+                    
 
 
                 </ul>
@@ -373,13 +378,8 @@
         </canvas>
         <script type="text/javascript" src="./js/anime.min.js"></script>
         <script type="text/javascript" src="./js/fireworks.js"></script>
+        
         <!-- Bootstrap core JS-->
         <script src="./js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     </body>
 </html>

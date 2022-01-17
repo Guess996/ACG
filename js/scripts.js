@@ -6,9 +6,7 @@
 //
 // Scripts
 // 
-
-
-   window.addEventListener('DOMContentLoaded', event => {
+ window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -50,8 +48,9 @@
         });
     });
 });
-    const textSearch=document.querySelector('#textSearch')
-    const SearchButton=document.querySelector('#Button')
+window.onload=()=>{
+     const textSearch=document.querySelector('#textSearch');
+    const SearchButton=document.querySelector('#Button');
     SearchButton.onclick=()=>{
         if(textSearch.value==''){
             alert('请输入内容');
@@ -94,6 +93,45 @@
             ullabel[i].style.background='#fff';
             ullabel[i].style.color='#64a19d';
         }
-    }
+
+}
+    console.log("\n %c WebSite 动漫导航 %c https://guess996.github.io/ACG/ \n", "color: #ffffff; background: #64a19d; padding:5px 0;", "background: #030307; padding:5px 0;");
+   axios.get('https://data.zhai78.com/openOneGood.php')
+    .then(function (response) {
+      console.log(response.data.txt);
+      document.querySelector('h2.at-item').innerHTML=response.data.txt;
+    })
+    .catch(function (error) {
+      console.log(error);
+    }); 
+       
+}//DOMContentLoaded
+
+// window.onload=()=>{
+//     console.log(sss);
+    
+// }
+  
     
 
+    // 2 快速入门
+    // 随机二次元图片
+    
+    // GET/POST /img?type=moe
+    // 示例：https://api.yimian.xyz/img?type=moe
+    // 随机Bing壁纸
+    
+    // GET/POST /img?type=wallpaper
+    // 示例：https://api.yimian.xyz/img?type=wallpaper
+    // 随机二次元头像
+    
+    // GET/POST /img?type=head
+    // 示例：https://api.yimian.xyz/img?type=head
+    // 随机图床图片
+    
+    // GET/POST /img?type=imgbed
+    // 示例：https://api.yimian.xyz/img?type=imgbed
+    // 随机1920x1080尺寸二次元图片
+    
+    // GET/POST /img?type=moe&size=1920x1080
+    // 示例：https://api.yimian.xyz/img?type=moe&size=1920x1080
