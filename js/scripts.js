@@ -82,7 +82,7 @@
     // labelbar[0].style.display='none';
     labelcont[0].style.display='block';
     ullabel[0].style.background='#fff';
-    ullabel[0].style.color='#de1c31';
+    ullabel[0].style.color='#64a19d';
         for(let i=0;i<ullabel.length;i++){
             ullabel[i].onclick=()=>{
 
@@ -90,10 +90,10 @@
                 ullabel.forEach((i)=>{i.style.background='',i.style.color='#fff'});
                 labelcont[i].style.display='block';
                 ullabel[i].style.background='#fff';
-                ullabel[i].style.color='#de1c31';
+                ullabel[i].style.color='#64a19d';
             }
         }
-    console.log("\n %c WebSite 动漫导航 %c https://guess996.github.io/ACG/ \n", "color: #ffffff; background: #de1c31; padding:5px 0;", "background: #030307; padding:5px 0;");
+    console.log("\n %c WebSite 动漫导航 %c https://guess996.github.io/ACG/ \n", "color: #ffffff; background:#64a19d; padding:5px 0;", "background: #030307; padding:5px 0;");
 
 
     axios.get('https://data.zhai78.com/openOneGood.php')

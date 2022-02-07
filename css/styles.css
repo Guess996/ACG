@@ -11638,7 +11638,7 @@ body::-webkit-scrollbar{
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 5px 10px 5px;
-  background-color: #de1c31;
+  background-color: var(--bs-teal);
   box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.1);
 
 }
@@ -11864,4 +11864,7 @@ body::-webkit-scrollbar{
 }
 h1 span.at-item:hover,h2.at-item:hover{
   color: var(--bs-red) !important;
+}
+marquee{
+  color: var(--bs-teal);margin-bottom: 10px;
 }
