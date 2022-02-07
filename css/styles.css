@@ -11863,7 +11863,7 @@ body::-webkit-scrollbar{
   transform: scale(1.1);
 }
 h1 span.at-item:hover,h2.at-item:hover{
-  color: var(--bs-red) !important;
+  color: var(--bs-white) !important;
 }
 marquee{
   color: var(--bs-teal);margin-bottom: 10px;
