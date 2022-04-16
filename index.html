@@ -29,7 +29,6 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#page-top">开始</a></li>
                         <li class="nav-item"><a class="nav-link" href="#dhl">内容</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#search">搜索</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="https://jubt.live/cn/index.html">聚BT</a></li> -->
                     </ul>
                 </div>
@@ -45,8 +44,27 @@
                         <!-- <h1 class="mx-auto my-0 text-uppercase "><span class="at-item">新春快乐</span> </h1> -->
                         <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5 at-item">祝大家新年快乐</h2> -->
                         <!-- <a class="btn btn-primary" href="#content">Go</a> -->
-                    </div>
+                        
+                    </div>      
                 </div>
+                <section class="search-section" id="search">
+                    <div class="container px-4 px-lg-5">
+                        <div class="row gx-4 gx-lg-5">
+                            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                                <form class="form-search" id="contactForm">
+                                    <div class="row input-group-newsletter">
+                                        <div class="col bag-blur"><input class="form-control" id="textSearch" type="search" placeholder="搜索的内容..." /></div>
+                                        <div class="col-auto"><button title="前往百度" class="search-button" id="Button" type="button">前往</button></div>
+                                    </div>     
+                                </form>
+                                <div class="position-h2">
+                                    <h2 class="text-white ">搜索你要的内容吧<i class="far fa-paper-plane fa-2x mb-2 text-white"></i></h2>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </header>
         <!-- content-->
@@ -355,22 +373,7 @@
             
         </section>
         <!-- search-->
-        <section class="search-section" id="search">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">搜索你要的内容吧</h2>
-                        <form class="form-search" id="contactForm">
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="textSearch" type="search" placeholder="搜索的内容..." /></div>
-                                <div class="col-auto"><button title="前往百度" class="search-button" id="Button" type="button">前往</button></div>
-                            </div>     
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <!-- Contact-->
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
@@ -392,7 +395,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="social d-flex justify-content-center" id="social">
+                <div class="social d-flex1 justify-content-center" id="social">
                     <a class="mx-2" href="javascript:;"><i class="fab fa-weibo"></i></a>
                     <a class="mx-2" href="javascript:;"><i class="fab fa-weixin"></i></a>
                     <a class="mx-2" href="javascript:;"><i class="fab fa-qq"></i></a>
@@ -411,6 +414,10 @@
         <script src="./js/bootstrap.bundle.min.js"></script>
         <!-- mian -->
         <script src="js/scripts.js"></script>
-
+        <!-- 雪花效果1 -->
+        <script src="js/snowflakes.min.js"></script>
+        <script>var sf = new Snowflakes({color: "#ffffff"});</script>
+        <!-- 雪花效果2 -->
+        <!-- <script src='js/snow.json'></script> -->
     </body>
 </html>

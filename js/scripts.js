@@ -93,19 +93,30 @@
                 ullabel[i].style.color='#64a19d';
             }
         }
-    console.log("\n %c WebSite 动漫导航 %c https://guess996.github.io/ACG/ \n", "color: #ffffff; background:#64a19d; padding:5px 0;", "background: #030307; padding:5px 0;");
+    console.log("\n %c WebSite 动漫导航 %c https://guess996.github.io/ACG/ \n", "color: #ffffff; background:#64a19d; padding:5px 0;", "background: #64a19d; padding:5px 0;");
+// https://data.zhai78.com/openOneGood.php
 
-
-    axios.get('https://data.zhai78.com/openOneGood.php')
-    .then(function (response) {
-      console.log(response.data.txt);
-      document.querySelector('h2.at-item').innerHTML=response.data.txt;
-    })
-    .catch(function (error) {
-      console.log(error);
-    }); 
+    // axios.get('https://api.qqsuu.cn/api/index',)
+    // .then(function (response) {
+    //   console.log(response.data.txt);
+    //   document.querySelector('h2.at-item').innerHTML=response.data.txt;
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // }); 
    
-       
+axios({
+    method:'get',
+    url:'https://api.oick.cn/dutang/api.php',
+    contentType: "application/x-www-form-urlencoded",
+    Headers:{
+        header:'Access-Control-Allow-Origin: *'
+    }
+  })
+    .then(function(response) {
+        console.log(response.data);
+        document.querySelector('h2.at-item').innerHTML=response.data
+  }).catch((e)=>console.log(e));
 //DOMContentLoaded
 
 // window.onload=()=>{
