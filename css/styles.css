@@ -7964,7 +7964,7 @@ a.navbar-brand:hover{
 
 .text-white {
   --bs-text-opacity: 1;
-  color:var(--bs-white) !important;
+  color:var(--bs-reda) !important;
 }
 
 .text-body {
@@ -11799,7 +11799,7 @@ margin-top: 20px;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border-radius: 5px;
-  border: 1px #fff solid;
+  border: 1px var(--bs-reda) solid;
   background-color: none;
 }
 .search-button{
@@ -11808,7 +11808,7 @@ margin-top: 20px;
 }
  .search-button:hover{
   cursor:pointer;
-  background: rgba(255, 255, 255, 1);
+  background: var(--bs-reda);
 }
 .contact-section {
   padding-top: 5rem;
