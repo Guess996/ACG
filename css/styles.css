@@ -11,7 +11,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-reda:#64a19d;
+    /*search this color green:#64a19d;yellow:#FFEB3B;*/
+
+  --bs-reda:#FDD835;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #7464a1;
@@ -20,7 +22,8 @@
   --bs-orange: #fd7e14;
   --bs-yellow: #e4c662;
   --bs-green: #67c29c;
-  --bs-teal: #64a19d;
+    /* this color green:#64a19d;yellow:#FFEB3B;*/
+  --bs-teal: #FDD835;
   --bs-cyan: #1cabc4;
   --bs-white: #fff;
   --bs-gray: #6c757d;
