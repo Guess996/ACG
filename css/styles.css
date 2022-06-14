@@ -96,7 +96,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  
+  background-color: #000;
 }
 
 hr {
@@ -11612,7 +11612,7 @@ body::-webkit-scrollbar{
   min-height: 35rem;
   padding: 15rem 0;
   /*https://api.mtyqx.cn/tapi/random.php*/
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 75%, #fff 100%), url("https://api.mtyqx.cn/tapi/random.php");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("https://api.ixiaowai.cn/gqapi/gqapi.php");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11659,7 +11659,7 @@ body::-webkit-scrollbar{
   width: 100%;
   height: auto;
   padding-top: 10rem;
-  background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .ullabel>ul{
@@ -11748,7 +11748,7 @@ body::-webkit-scrollbar{
   text-overflow: ellipsis;
   line-height: 50px;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   border-bottom: 2px  var(--bs-teal) solid;
   border-radius: 5px;
   transition: all .2s;
@@ -11807,6 +11807,7 @@ margin-top: 20px;
 }
 .search-button{
   background: none;
+  color: #fff;
   transition: all .2s;
 }
  .search-button:hover{
