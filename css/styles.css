@@ -13,7 +13,7 @@
 :root {
     /*search this color green:#64a19d;yellow:#FFEB3B;*/
 
-  --bs-reda:#FDD835;
+  --bs-reda:#FFF;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #7464a1;
@@ -23,7 +23,7 @@
   --bs-yellow: #e4c662;
   --bs-green: #67c29c;
     /* this color green:#64a19d;yellow:#FFEB3B;*/
-  --bs-teal: #FDD835;
+  --bs-teal: #fff;
   --bs-cyan: #1cabc4;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -11668,9 +11668,9 @@ body::-webkit-scrollbar{
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 5px 10px 5px;
-  background-color: var(--bs-teal);
+  /* background-color: var(--bs-teal); */
   box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.1);
-
+border-bottom: 1px dashed #fff;
 }
 .ullabel>ul>li{
   list-style: none;
@@ -11684,7 +11684,7 @@ body::-webkit-scrollbar{
 }
 .ullabel>ul>li:hover{
   cursor: pointer;
-  color: #fff;
+  color: #000;
   background:  var(--bs-teal);
   
 }
@@ -11759,7 +11759,7 @@ body::-webkit-scrollbar{
   transform: scale(1.1);
 }
 .content-section_div>ul>li>a:hover{
-  color: #fff;
+  color: #000;
   background-color: var(--bs-teal) ;
 
 }
