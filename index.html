@@ -6,6 +6,9 @@
         <meta name="description" content="专注于资源收集整理" />
         <meta name="author" content="" />
         <title>ACG</title>
+     
+        <script src="./js/vue.global.js"></script> 
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <link rel="icon" type="image/png" href="assets/favicon.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -14,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -28,6 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#page-top">开始</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dmday">番剧</a></li>
                         <li class="nav-item"><a class="nav-link" href="#dhl">内容</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="https://jubt.live/cn/index.html">聚BT</a></li> -->
                     </ul>
@@ -67,6 +71,130 @@
                 </section>
             </div>
         </header>
+        
+        <section id="dmday">
+            <Transition>
+               <ul class="dateul" v-if="showdataul">
+                <li
+                 v-for="(item,index) in this.dataul"
+                :key="index"
+                :class="[index==this.daynum-1?'dataulcolor':'']"
+                @click=butclick(index)
+                >
+                   {{item.weekday.cn == this.day ?'今天':item.weekday.cn}}
+                </li>
+               </ul>
+            </Transition>
+            <Transition>
+                <section class="uldata">
+                    <ul  v-for="(item,index1) in this.dataul"
+                    :key="index1" :class="[index1==this.daynum-1?'uldatashow':'uldatahide']">
+                    
+                   <a :href="itema.url" target="_blank" rel="noopener noreferrer"
+                   v-for="(itema,index2) in item.items"
+                    :key="index2"
+                   >
+                  <!-- {{itema.name}}   -->
+                  <li>
+                    <img :src="itemb" alt="这是图片" v-for="(itemb,index3) in itema.images"
+                     :key="index3" :class="[index3=='large'?'showimg':'hideimg']"
+                    />
+                    <!-- {{
+                   this.dataul[index1].items[index2].images.large 
+                  }} -->
+                  </li>
+                  <p>{{itema.air_date}}</p>
+                  <!-- <p v-for="(itemc,index4) in itema.rating">
+                    {{itemc}}
+                  </p> -->
+                   <p>{{itema.name}}</p>
+                   </a>
+            </ul>
+                </section>
+            </Transition>
+            
+
+           
+        </section>
+        <script>
+            const  VueApp = {
+              data() {
+                return {
+                  message: 'Hello Vue!!',
+                  showdataul:false,dataul:[],
+                  day:'',
+                  daynum:0,
+                  dateul:[],
+                  uldate:[],
+
+                weeks: [
+        '星期日',
+        '星期一',
+        '星期二',
+        '星期三',
+        '星期四',
+        '星期五',
+        '星期六'
+      ],
+                }
+              },
+              beforeMount() {
+  axios
+                ({
+    method:'get',
+    url:'https://api.bgm.tv/calendar',
+    contentType: "application/x-www-form-urlencoded",
+    Headers:{
+        header:'Access-Control-Allow-Origin: *'
+    }
+  }).then((response)=>{
+                    this.showdataul= !this.showdataul;
+                    this.dataul =response.data
+                    
+                })
+                .catch(function (error) { // 请求失败处理
+                    console.log(error);
+                });
+        var now = new Date()
+        this.daynum=now.getDay();
+        this.day =this.weeks[this.daynum];
+        console.log(this.daynum);
+  },
+    mounted () {
+                  
+
+
+  },
+  methods: {
+    
+butclick(i){
+this.dateul=document.querySelectorAll('.dateul>li');
+this.uldate=document.querySelectorAll('.uldata>ul');
+// console.log(this.uldate);
+this.$nextTick(()=>{
+  this.daynum=++i;
+ })
+ for(let i=0;i<this.dateul.length;i++){
+    this.dateul[i].onclick=()=>{
+        // this.uldate.forEach((i)=>{i.style.display='none'});
+        // this.uldate[i].style.display='block';
+        this.daynum=++i;
+//  this.dateul[i].style.background='#fff';
+        // this.dateul.forEach((i)=>{i.style.background='',i.style.color='#000'});
+                // labelcont[i].style.display='block';
+               
+                // ullabel[i].style.color=colora;
+            }
+        }
+}
+
+  },
+
+            
+            }
+           
+            Vue.createApp(VueApp).mount('#dmday')
+            </script>
         <!-- content-->
         <section class="content-section text-center" id="content">
             <marquee behavior="scroll" direction="left">《下面域名很容易更换请勿相信里面内容!!!，本站数据均来自百度》</marquee>
@@ -405,6 +533,7 @@
                     <li><a title="最强工具人" href="https://www.toolfk.com/" >最强工具人</a></li>
                     <li><a title="一个工具箱" href="http://www.atoolbox.net/" >一个工具箱</a></li>
                     <li><a title="LDtools" href="https://ldtstore.com.cn/ldtools/" >LDtools</a></li>
+                    <li><a title="FlashPlayer特别版(密码2102)" href="https://yuesekaer.lanzoum.com/b026q53gj" >FlashPlayer特别版</a></li>
                 </ul>
             </div>
             

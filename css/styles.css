@@ -123,7 +123,9 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin: 0;
   padding: 0;
   margin-top: 20px;
-  padding-left: 120px;
+  display: flex;
+  justify-content: center;
+  /* padding-left: 120px; */
 }
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
@@ -11672,7 +11674,7 @@ body::-webkit-scrollbar{
   padding: 10px 5px 10px 5px;
   /* background-color: var(--bs-teal); */
   box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.1);
-border-bottom: 1px dashed #fff;
+/* border-bottom: 1px dashed #fff; */
 }
 .ullabel>ul>li{
   list-style: none;
@@ -11688,7 +11690,6 @@ border-bottom: 1px dashed #fff;
   cursor: pointer;
   color: #000;
   background:  var(--bs-teal);
-  
 }
 .content-section_div {
   width: 100%;
@@ -11904,4 +11905,85 @@ h1 span.at-item:hover,h2.at-item:hover{
 }
 marquee{
   color: var(--bs-teal);margin-bottom: 10px;
+}
+#dmday{
+  width: 100vw;
+}
+.dateul{
+display: flex;
+width: 100%;
+justify-content: space-around;
+
+}
+.dateul>li,.uldata>ul>a>li{
+  list-style: none;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  /* border: 1px var(--bs-teal) solid; */
+  color:  var(--bs-teal);
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 10%);
+}
+.dateul>li:hover,.uldata>ul>a:hover{
+  cursor:
+  pointer;
+  color: #000;
+  background-color: var(--bs-teal);
+}
+.uldata>ul>a:hover>li{
+  color: #000;
+}
+.dataulcolor{
+  background-color:  var(--bs-teal);
+  color:
+  none;
+  color:#000 !important;
+}
+.uldata{
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.uldata>ul{
+  /* position: absolute; */
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 0;
+}
+.uldatahide{
+  display: none !important;
+}
+.uldatashow{
+  display: block !important;
+}
+.uldata>ul>a{
+  display: inline-block;
+
+  padding: 5px;
+  color:  var(--bs-teal);
+  border-radius: 5px;
+  text-decoration: none;
+  width: 200px;
+
+}
+.uldata>ul>a>li{
+  display: inline-block;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.uldata>ul>a>li>img{
+  width: 100%;
+  height: 100%;
+  }
+.hideimg{
+  display: none;
+}
+.showimg{
+  display: block;
 }

@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
     ];
     var myObj = {"title":[]};
     listTitle.forEach((i)=>{
-        console.log(i)
+        // console.log(i)
         myObj.title.push(t+i);
     });
         
@@ -110,18 +110,19 @@ time1 = setInterval(title,3000);
 
 
     const colora='#000';
+    const colorb='#fff';
     var labelcont=document.querySelectorAll('.content-section_sec>.content-section_div');
     var ullabel= document.querySelectorAll('.ullabel>ul>li');
     // labelbar[0].style.display='none';
     labelcont[0].style.display='block';
-    ullabel[0].style.background='#fff';
+    ullabel[0].style.background=colorb;
     ullabel[0].style.color=colora;
         for(let i=0;i<ullabel.length;i++){
             ullabel[i].onclick=()=>{
                 labelcont.forEach((i)=>{i.style.display='none'});
-                ullabel.forEach((i)=>{i.style.background='',i.style.color='#fff'});
+                ullabel.forEach((i)=>{i.style.background='',i.style.color=colorb});
                 labelcont[i].style.display='block';
-                ullabel[i].style.background='#fff';
+                ullabel[i].style.background=colorb;
                 ullabel[i].style.color=colora;
             }
         }
@@ -151,18 +152,18 @@ time1 = setInterval(title,3000);
         console.log(response.data);
         document.querySelector('h2.at-item').innerHTML=response.data
   }).catch((e)=>console.log(e));
-  axios({
-    method:'get',
-    url:'https://bgmlist.com/api/v1/bangumi/onair',
-    contentType: "application/x-www-form-urlencoded",
-    Headers:{
-        header:'Access-Control-Allow-Origin: *'
-    }
-  })
-    .then(function(response) {
-        console.log(response.data);
+//   axios({
+//     method:'get',
+//     url:'https://bgmlist.com/api/v1/bangumi/onair',
+//     contentType: "application/x-www-form-urlencoded",
+//     Headers:{
+//         header:'Access-Control-Allow-Origin: *'
+//     }
+//   })
+//     .then(function(response) {
+//         console.log(response.data);
         
-  }).catch((e)=>console.log(e));
+//   }).catch((e)=>console.log(e));
   //https://api.bilibili.com/pgc/web/timeline?types=1&before=6&after=6
 //
 //禁用控制台
