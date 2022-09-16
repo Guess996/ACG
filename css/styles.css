@@ -11597,6 +11597,7 @@ body::-webkit-scrollbar{
     outline: none;
     border-bottom: 0.25rem solid  var(--bs-linkAc);
   }
+
 }
 
 .btn {
@@ -11641,6 +11642,7 @@ body::-webkit-scrollbar{
     font-size: 4rem;
     line-height: 4rem;
   }
+
 }
 @media (min-width: 992px) {
   .masthead {
@@ -11656,6 +11658,7 @@ body::-webkit-scrollbar{
     max-width: 30rem;
     font-size: 1.25rem;
   }
+
 }
 
 .content-section {
@@ -11770,6 +11773,12 @@ body::-webkit-scrollbar{
   .content-section_div>ul,.urllabel>li{
     flex-wrap: wrap;
   }
+ 
+}
+@media (max-width: 400px) {
+ .uldata>ul>a{
+    margin-left:calc(100% / 4.5 + 1px);
+ }
 }
 .search-section {
   /* padding: 0 0 10rem 0; */
@@ -11909,12 +11918,7 @@ marquee{
 #dmday{
   width: 100vw;
 }
-.dateul{
-display: flex;
-width: 100%;
-justify-content: space-around;
-
-}
+.dateul{display: flex;width: 100%;justify-content: space-around;margin: 0;padding: 0;}
 .dateul>li,.uldata>ul>a>li{
   list-style: none;
   display: inline-block;
@@ -11944,15 +11948,15 @@ justify-content: space-around;
   position: relative;
   display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .uldata>ul{
-  /* position: absolute; */
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* align-items: center; */
   width: 100%;
-  display: flex;
+  /* display: flex; */
   padding: 0;
 }
 .uldatahide{
@@ -11963,24 +11967,30 @@ justify-content: space-around;
 }
 .uldata>ul>a{
   display: inline-block;
-
   padding: 5px;
   color:  var(--bs-teal);
   border-radius: 5px;
   text-decoration: none;
   width: 200px;
-
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  /* align-items: center; */
 }
 .uldata>ul>a>li{
   display: inline-block;
-display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
 }
 .uldata>ul>a>li>img{
   width: 100%;
   height: 100%;
   }
+/* .uldata>ul>a>p{
+text-align: center;
+} */
 .hideimg{
   display: none;
 }

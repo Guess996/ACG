@@ -166,6 +166,90 @@ time1 = setInterval(title,3000);
 //   }).catch((e)=>console.log(e));
   //https://api.bilibili.com/pgc/web/timeline?types=1&before=6&after=6
 //
+///////////////VUE///////////////////////////////
+const  VueApp = {
+    data() {
+      return {
+        message: 'Hello Vue!!',
+        showdataul:false,dataul:[],
+        day:'',
+        daynum:0,
+        dateul:[],
+        uldate:[],
+
+      weeks: [
+'星期日',
+'星期一',
+'星期二',
+'星期三',
+'星期四',
+'星期五',
+'星期六'
+],
+      }
+    },
+    beforeMount() {
+axios
+      ({
+method:'get',
+url:'https://api.bgm.tv/calendar',
+contentType: "application/x-www-form-urlencoded",
+Headers:{
+header:'Access-Control-Allow-Origin: *'
+}
+}).then((response)=>{
+          this.showdataul= !this.showdataul;
+          this.dataul =response.data
+          
+      })
+      .catch(function (error) { // 请求失败处理
+          console.log(error);
+      });
+var now = new Date()
+this.daynum=now.getDay();
+this.day =this.weeks[this.daynum];
+console.log(this.daynum);
+},
+mounted () {
+        
+
+
+},
+methods: {
+
+butclick(i){
+this.dateul=document.querySelectorAll('.dateul>li');
+this.uldate=document.querySelectorAll('.uldata>ul');
+// console.log(this.uldate);
+this.$nextTick(()=>{
+this.daynum=++i;
+})
+for(let i=0;i<this.dateul.length;i++){
+this.dateul[i].onclick=()=>{
+// this.uldate.forEach((i)=>{i.style.display='none'});
+// this.uldate[i].style.display='block';
+this.daynum=++i;
+//  this.dateul[i].style.background='#fff';
+// this.dateul.forEach((i)=>{i.style.background='',i.style.color='#000'});
+      // labelcont[i].style.display='block';
+     
+      // ullabel[i].style.color=colora;
+  }
+}
+}
+
+},
+
+  
+  }
+ 
+  Vue.createApp(VueApp).mount('#dmday')
+
+
+
+
+
+
 //禁用控制台
 //
     // const handler = setInterval(function() {
