@@ -11,6 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --main-shadow: rgba(116, 116, 116, 0.08);
     /*search this color green:#64a19d;yellow:#FFEB3B;*/
 
   --bs-reda:#FFF;
@@ -87,6 +88,9 @@
 *{
   transition: all .3s;
 }
+html {
+  scroll-padding-top: calc(4.5rem - 1px);
+}
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -99,7 +103,30 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #000;
+  letter-spacing: 0.0625em;
+  cursor: url(http://www.ibloger.net/cursor.ico),auto;
+  /* cursor: url(../assets/favicon.cur),auto; */
 }
+body::-webkit-scrollbar{
+
+  width: 0px;    
+   /* 高宽分别对应横竖滚动条的尺寸 */
+
+  height: 0px;
+
+}
+/* body::-webkit-scrollbar-thumb,.website::-webkit-scrollbar-thumb { */
+  /* 滚动条里面小方块 */
+  /* border-radius: 10px; */
+   /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
+  /* background: #00cce7; */
+/* } */
+/* body::-webkit-scrollbar-track{ */
+  /* 滚动条里面轨道 */
+  /* background-color: rgba(255, 255, 255,0); */
+  /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
+  /* border-radius: 10px; */
+/* } */
 
 hr {
   margin: 1rem 0;
@@ -4649,7 +4676,7 @@ a.navbar-brand:hover{
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-.card1{background: url('https://www.yingciyuan.cn/pc.php');background-size: cover;}
+.card1{background: url('https://api.paugram.com/wallpaper/?source=gt');background-size: cover;}
 .card2{background: url('https://api.ghser.com/random/pc.php');background-size: cover;}
 .card3{
   background: url('https://www.dmoe.cc/random.php');background-size: cover;
@@ -11496,35 +11523,7 @@ a.navbar-brand:hover{
     display: none !important;
   }
 }
-html {
-  scroll-padding-top: calc(4.5rem - 1px);
-}
 
-body {
-  letter-spacing: 0.0625em;
-  /* overflow: hidden; */
-}
-
-body::-webkit-scrollbar{
-
-  width: 0px;    
-   /* 高宽分别对应横竖滚动条的尺寸 */
-
-  height: 0px;
-
-}
-/* body::-webkit-scrollbar-thumb,.website::-webkit-scrollbar-thumb { */
-  /* 滚动条里面小方块 */
-  /* border-radius: 10px; */
-   /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
-  /* background: #00cce7; */
-/* } */
-/* body::-webkit-scrollbar-track{ */
-  /* 滚动条里面轨道 */
-  /* background-color: rgba(255, 255, 255,0); */
-  /* -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); */
-  /* border-radius: 10px; */
-/* } */
 #mainNav {
   min-height: 3.5rem;
   background-color: #fff;
@@ -11576,26 +11575,32 @@ body::-webkit-scrollbar{
     color: #fff;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: saturate(5) blur(20px);
+    --webkit-backdrop-filter: saturate(5) blur(20px);
+    box-shadow: 0 4px 10pxvar(--main-shadow);
+
   }
-  #mainNav.navbar-shrink .navbar-brand {
+  /* ACG黑色 */
+  /* #mainNav.navbar-shrink .navbar-brand {
     color: var(--bs-linkAc);
-  }
+  } */
   #mainNav.navbar-shrink .nav-link {
-    color: #000;
+    color: var(--bs-white);
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
     color:  var(--bs-butColor);
   }
-  #mainNav.navbar-shrink .nav-link:active {
+  /* #mainNav.navbar-shrink .nav-link:active {
     color: #467370;
-  }
+  } */
+  /* 导航栏颜色 */
   #mainNav.navbar-shrink .nav-link.active {
-    color:  var(--bs-linkAc);
+    color:  var(--bs-white);
     outline: none;
-    border-bottom: 0.25rem solid  var(--bs-linkAc);
+    border-bottom: 0.25rem solid  var(--bs-white);
   }
 
 }
@@ -11616,8 +11621,11 @@ body::-webkit-scrollbar{
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  /*https://api.mtyqx.cn/tapi/random.php*/
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("https://api.ixiaowai.cn/gqapi/gqapi.php");
+  /*二次元 https://api.mtyqx.cn/tapi/random.php*/
+  /* 二次元 https://api.ixiaowai.cn/api/api.php */
+  /*二次元 http://www.dmoe.cc/random.php */
+  /* 风景类 https://api.ixiaowai.cn/gqapi/gqapi.php*/
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("https://api.ixiaowai.cn/api/api.php");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11667,6 +11675,11 @@ body::-webkit-scrollbar{
   height: auto;
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  /* background-image: url('http://www.dmoe.cc/random.php'); */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* --webkit-backdrop-filter:
+  saturate(5) blur(20px); */
+  /* backdrop-filter: saturate(5) blur(20px); */
 }
 
 .ullabel>ul{
@@ -11681,7 +11694,8 @@ body::-webkit-scrollbar{
 }
 .ullabel>ul>li{
   list-style: none;
-  display:inline-block;
+  display:
+  inline-block;
   margin-top: 10px;
   padding: 10px;
   /* border: 1px  var(--bs-teal) solid; */
@@ -11691,7 +11705,7 @@ body::-webkit-scrollbar{
 }
 .ullabel>ul>li:hover{
   cursor: pointer;
-  color: #000;
+  color: #000 !important;
   background:  var(--bs-teal);
 }
 .content-section_div {
