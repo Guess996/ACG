@@ -82,8 +82,9 @@
                 :class="[index==this.daynum?'dataulcolor':'']"
                 @click=butclick(index)
                 >
+           
                 <!-- {{index}}--{{this.daynum}} -->
-                   {{index==this.daynum ?'今天':item.weekday.cn}}
+                   {{item.weekday.cn==this.day?'今天':item.weekday.cn}}
                 </li>
                </ul>
             </Transition>
@@ -96,7 +97,7 @@
                    v-for="(itema,index2) in item.items"
                     :key="index2"
                    >
-                  <!-- {{itema.name}}   -->
+                
                   <li>
                     <img :src="itemb" alt="这是图片" v-for="(itemb,index3) in itema.images"
                      :key="index3" :class="[index3=='large'?'showimg':'hideimg']"

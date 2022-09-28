@@ -209,7 +209,9 @@ var now = new Date();
 //细节周日是0，这里0为false
 this.daynum=now.getDay()||6;
 this.day =this.weeks[this.daynum];
-console.log(this.daynum);
+this.daynum==6?6:this.daynum--;
+ 
+// console.log();
 },
 mounted () {
         
@@ -221,17 +223,18 @@ methods: {
 butclick(i){
 this.dateul=document.querySelectorAll('.dateul>li');
 this.uldate=document.querySelectorAll('.uldata>ul');
-console.log(this.uldate);
+// console.log(this.uldate);
 
 this.$nextTick(()=>{
 this.daynum=i;
 console.log(i);
-console.log(this.daynum);
+// console.log(this.daynum);
 })
 for(let i=0;i<this.dateul.length;i++){
 this.dateul[i].onclick=()=>{
 // this.uldate.forEach((i)=>{i.style.display='none'});
 // this.uldate[i].style.display='block';
+// console.log(i);
 this.daynum=i;
 //  this.dateul[i].style.background='#fff';
 // this.dateul.forEach((i)=>{i.style.background='',i.style.color='#000'});
