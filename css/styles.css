@@ -4698,7 +4698,7 @@ a.navbar-brand:hover{
   width: 100%;
   justify-content: center;
   align-items: center;
- 
+ overflow: hidden;
 }
 
 /*一个溢出的盒子作为边框，添加背景后形成光源效果*/
@@ -12078,7 +12078,7 @@ text-align: center;
   display: block;
 }
 .card-img{
-  width: 250px;
-  height: 150px;
+  width: 100%;
+  height:100%;
   object-fit: contain;
 }
