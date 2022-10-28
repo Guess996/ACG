@@ -1,5 +1,10 @@
+   // 获取动画
+   const loader = document.querySelector(".spinner");
+   // 加载完成事件
 window.addEventListener('DOMContentLoaded', () => {
-
+// 加载完成，隐藏动画，显示内容
+    loader.style.display = "none";
+    document.querySelector('#page-top').style.overflow='scroll';
     var t = document.title ;
     let listTitle=[
         "♪♫¸（⊙‿⊙）✌","♪♫¸（◠▽◠）✌","♪♫¸（ ô‿ô ） ","♪♫¸（͡° ʖ ͡°）","♪♫¸（͡ Ö‿Ö ） ","♪♫¸（＾▽＾）","♪♫¸（ •◡• ）","♪♫¸（ ¬‿¬ ）","♪♫¸（◉◡◉）✌","♪♫¸（◔◡◔）✌","♪♫¸（ˇωˇ）✌","♪♫¸（ô ◡ ô）","♪♫¸（∩▽∩）✌","♪♫¸（ >‿◠）✌","♪♫¸（⊙△⊙）✌","♪♫¸（≧▽≦）✌","♪♫¸（ ^人^ ）","♪♫¸（°ω°）✌","♪♫¸（ˋωˊ）✌","♪♫¸（ˋ△ˊ）✌","♪♫¸（ˇ▽ˇ）✌","♪♫¸（°ο°）✌","♪♫¸（ˇ◡ˇ）✌","♪♫¸（ ⊙ʖ⊙）✌","♪♫¸（ˉ▽ˉ）✌","♪♫¸（￣□￣）✌",
